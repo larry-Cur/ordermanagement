@@ -105,8 +105,8 @@
 
 <script>
 // shopedit
-import { shopinfo, SHOP_IMG_UPLOAD, SHOP_IMG_URL,shopedit } from "@/api/apis";
-import { getDate } from "@/utils/utils"
+import { shopinfo, SHOP_IMG_UPLOAD, SHOP_IMG_URL, shopedit } from "@/api/apis";
+import { getDate } from "@/utils/utils";
 //  shopedit
 export default {
   data() {
@@ -124,6 +124,7 @@ export default {
         "在线支付满28减5",
         "特价饮品8折抢购",
         "单人特色套餐",
+        "单人加量吃货餐",
       ],
     };
   },
@@ -148,7 +149,6 @@ export default {
       // 要移除的图片名字
       // 找到并移除
       this.form.pics.splice(this.form.pics.indexOf(res.name), 1);
-
     },
 
     //保存
@@ -169,10 +169,7 @@ export default {
       } = this.form;
 
       pics = JSON.stringify(pics);
-      date = JSON.stringify([
-        getDate(date[0]),
-        getDate(date[1])
-      ]);
+      date = JSON.stringify([getDate(date[0]), getDate(date[1])]);
       supports = JSON.stringify(supports);
       shopedit(
         id,
