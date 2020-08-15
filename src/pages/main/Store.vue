@@ -140,7 +140,6 @@ export default {
     },
     picsSuccess(res) {
       if (res.code == 0) {
-        console.log(res.imgUrl);
         this.form.pics.push(res.imgUrl);
       }
     },
@@ -204,7 +203,6 @@ export default {
     //渲染
     randstore() {
       shopinfo().then((res) => {
-        // console.log(res.data);
         this.form = res.data.data;
         this.form.supportsList = this.supportsList;
         this.SHOP_IMG_URL = SHOP_IMG_URL;

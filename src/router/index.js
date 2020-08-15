@@ -143,12 +143,11 @@ router.beforeEach((to, from, next) => {
   if (to.path != '/') {
     checktoken(localStorage.token).then(res => {
       if (res.data.code == 0) {
-        if (to.meta.power.includes(localStorage.role)) {
-          next()
-        } else {
+        if (JSON.stringify(to.meta) == '{}') {
           next('/')
+        } else if(to.meta.power.includes(localStorage.role)){
+          next()
         }
-        next()
       } else
         next('/')
     })

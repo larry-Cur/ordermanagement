@@ -82,8 +82,8 @@ export default {
     },
     // 图片上传
     //删除
-    handleRemove(file, fileList) {
-      console.log(file, fileList);
+    handleRemove() {
+      // console.log(file, fileList);
     },
   
     //上传图片

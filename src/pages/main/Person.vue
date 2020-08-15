@@ -54,19 +54,15 @@ export default {
     };
   },
   methods: {
-    handleAvatarSuccess(res, file) {
+    handleAvatarSuccess(res) {
       if (res.code == 0) {
         this.$bus.$emit('imgup')
       }
-      console.log(res);
-      console.log(file);
     },
     randinfo() {
       takeuser(localStorage.id).then((res) => {
         if (res.data) {
-          console.log(res.data);
           this.user = res.data.accountInfo;
-
           this.user.ctime = getDate( this.user.ctime)
         } else {
           alert("数据加载失败");

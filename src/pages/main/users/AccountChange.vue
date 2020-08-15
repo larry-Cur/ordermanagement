@@ -69,7 +69,6 @@ export default {
         return;
       }
       if (this.flag) {
-        console.log(this.pwdlist.newpwd,localStorage.id);
         changepwd(this.pwdlist.newpwd, localStorage.id).then((res) => {
           if (res.data.code == 0) {
             this.$message({

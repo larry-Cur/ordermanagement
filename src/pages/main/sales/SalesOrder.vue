@@ -132,7 +132,6 @@ export default {
     //渲染
     randOrder() {
       let dateArr1 = JSON.stringify(this.dateArr);
-      console.log(dateArr1);
       ordertotal(dateArr1).then((res) => {
         let dArr = res.data.data;
          this.resData=[]
