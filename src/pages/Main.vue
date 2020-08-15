@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <!-- 侧边导航 -->
+    <!-- 侧边栏导航 -->
     <el-aside width="270px">
       <div class="aside-title_div">
         <div class="t-img_div">
