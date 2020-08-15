@@ -146,7 +146,7 @@ router.beforeEach((to, from, next) => {
         if (JSON.stringify(to.meta) == '{}') {
           next('/')
         } else if(to.meta.power.includes(localStorage.role)){
-          next()
+          next() 
         }
       } else
         next('/')
