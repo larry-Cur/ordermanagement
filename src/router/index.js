@@ -33,7 +33,7 @@ var router = new VueRouter({
         component: () => import('../pages/main/Index'),
         meta: {
           power: ['super', 'normal'],
-          hashname: ['首页']
+          hashname: ['']
         }
       },
       { // 订单管理

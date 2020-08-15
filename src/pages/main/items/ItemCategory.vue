@@ -183,6 +183,7 @@ export default {
     //
     handleCurrentChange(val) {
       this.currentPage = val;
+       
       // 渲染
       this.randercate();
     },

@@ -6,14 +6,14 @@
         <div class="t-img_div">
           <i class="el-icon-dish"></i>
         </div>
-        <p>外卖商家中心</p>
+        <p>源丰订单中心</p>
       </div>
       <el-menu
         :default-active="curhash"
         class="el-menu-vertical-demo"
         background-color="#304156"
         text-color="#fff"
-        active-text-color="#409eff"
+        active-text-color="#4ED793"
         router
         unique-opened
       >
@@ -200,15 +200,22 @@ export default {
   height: 100%;
   .el-aside {
     background: @base;
+    p {
+      color: #4ed793;
+    }
   }
 }
 
 .header {
   display: flex;
+  background-image: linear-gradient(to right, #2d3a4b, #4ed793;);
   .header-nav {
     font-size: 20px;
     line-height: 50px;
     flex: 1;
+  }
+  .is-link {
+    color: #fff;
   }
   .user-img {
     a {
@@ -236,7 +243,7 @@ ul {
   align-items: center;
   margin-top: 20px;
   .t-img_div {
-    background: #1296db;
+    background: #4ed793;
     width: 50px;
     height: 50px;
     line-height: 50px;

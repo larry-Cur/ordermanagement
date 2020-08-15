@@ -1,20 +1,30 @@
 <template>
   <el-container>
-    <div class="login_div">
-      <h1>鑫三利餐馆后台管理</h1>
-      <p class="username_p">
-        <i class="el-icon-user-solid"></i>
-        <input type="text" id="username_ipt" v-model="acc" />
-      </p>
-      <p class="password_p">
-        <i class="el-icon-lock"></i>
-        <input type="password" id="password_ipt" v-model="pwd" />
-      </p>
-      <p class="err_p">{{errMsg}}</p>
-      <p>
-        <button type="button" id="login_btn" @click="loginClick" lain="true">登录</button>
-      </p>
-    </div>
+    <el-header>
+      <h1>源丰后台管理</h1>
+    </el-header>
+    <el-main>
+      <div class="log_img">
+        <img src="../assets/imgs/logo.png" alt="logo" />
+      </div>
+      <div class="login_div">
+        <p class="username_p">
+          <i class="el-icon-user-solid"></i>
+          <input type="text" id="username_ipt" v-model="acc" />
+        </p>
+        <p class="password_p">
+          <i class="el-icon-lock"></i>
+          <input type="password" id="password_ipt" v-model="pwd" />
+        </p>
+        <p class="err_p">{{errMsg}}</p>
+        <p>
+          <button type="button" id="login_btn" @click="loginClick" lain="true">登录</button>
+        </p>
+      </div>
+    </el-main>
+    <el-footer id="footer">
+      <p v-html="copy"></p>
+    </el-footer>
   </el-container>
 </template>
 
@@ -27,6 +37,9 @@ export default {
       acc: "",
       pwd: "",
       errMsg: "",
+      copy:
+        "Copyright &copy; 2020源丰餐饮集团 All Rights Reserved&#8195;&#8195;&#8195; 鄂ICP备05016420号鄂公网安备110401300072号",
+      // logo:"",
     };
   },
   methods: {
@@ -57,18 +70,26 @@ export default {
 .el-container {
   height: 100%;
   width: 100%;
-  background: #2d3a4b;
+  background-image: linear-gradient(#4ed793, #2d3a4b);
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  min-width: 1000px;
+  h1 {
+    padding: 50px 0;
+    line-height: 100px;
+    font-size: 40px;
+    color: #fff;
+  }
+  .el-main {
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 600px;
+  }
   .login_div {
     width: 550px;
     color: #fff;
-    h1 {
-      line-height: 50px;
-    }
+
     p {
       margin-top: 30px;
       width: 100%;
@@ -76,7 +97,7 @@ export default {
       input {
         border: none;
         outline: none;
-        width: 100%;
+        width: 80%;
         height: 50px;
         font-size: 30px;
         border: 1px solid #c6c9cc;
@@ -89,15 +110,15 @@ export default {
         position: absolute;
         font-size: 30px;
         top: 50%;
-        left: 5px;
-        color: #c0c4cc;
+        left: 60px;
+        color: #4ed793;
         margin-top: -15px;
       }
     }
   }
   #login_btn {
-    width: 100%;
-    background: #409eff;
+    width: 80%;
+    background: #4ed793;
     line-height: 54px;
     border: none;
     outline: none;
@@ -110,5 +131,9 @@ export default {
     font-weight: bold;
     font-size: 16px;
   }
+}
+#footer {
+  color: #dddddd;
+  height: 30px !important;
 }
 </style>
