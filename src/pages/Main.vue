@@ -40,8 +40,8 @@
       <!-- 头部 -->
       <el-header class="header">
         <el-breadcrumb separator-class="el-icon-arrow-right" class="header-nav">
-          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item v-for="item in hashName" :key="item">{{item}}</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/' }"><span class="nav_span">首页</span></el-breadcrumb-item>
+          <el-breadcrumb-item v-for="item in hashName" :key="item"><span class="nav_span">{{item}}</span></el-breadcrumb-item>
         </el-breadcrumb>
         <div class="user-img">
           <router-link to="/main/person">
@@ -196,6 +196,9 @@ export default {
 <style lang="less" scoped>
 @base: #304156;
 @basegary: #f0f2f5;
+.nav_span{
+  color: #fff;
+}
 .el-container {
   height: 100%;
   .el-aside {
